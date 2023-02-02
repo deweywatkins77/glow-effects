@@ -1,0 +1,91 @@
+:root{
+    --textcolor: cyan;
+    --glow: rgb(133, 252, 252);
+    --grey: rgb(223, 165, 100);
+    --green: rgb(223, 165, 100);
+    --background: lightslategray;
+    --textbackground: lightslategray;
+}
+
+body{
+    background-color: var(--background);
+}
+
+header p {
+    font-size: 86px;
+    color: var(--green);
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card {
+    border-style: dashed;
+    width: 30%;
+    margin-left: 1%;
+    margin-right: 1%;
+    margin-bottom: 45px;
+    border-color: var(--grey);
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover,
+.card:hover h1 {
+    transition: all 0.5s ease-in-out;
+    box-shadow: inset 0px 0px 8px var(--glow),
+        0px 0px 8px var(--glow);
+}
+
+.card h1 {
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: var(--grey);
+    margin: -30px auto 0px;
+    padding: 5px;
+    width: 80%;
+    background-color: var(--background);
+    color: var(--textcolor);
+    font-size: 36px;
+    font-style: bold;
+    text-align: center;
+}
+
+.card p {
+    color: var(--textcolor);
+    margin-left: 8.5%;
+    width: 80%;
+}
+
+.card pre {
+    display: flex;
+    margin-left: 8.5%;
+    width: 80%;
+    border-radius: 10px;
+    text-align: justify;
+    white-space: pre-wrap;
+    background-image: linear-gradient(var(--textcolor), var(--glow));
+    padding: 5px;
+    flex: 1;
+    align-items: center;
+}
+
+.card pre:active {
+    user-select: all;
+}
+
+@media only screen and (max-width: 960px) {
+    .card {
+        width: 45%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .card {
+        width: 90%;
+    }
+}
